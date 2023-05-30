@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Navber = () => {
     const options = <>
-        <li><a>HOME</a></li>
-        <li><a>CONTACT us</a></li>
-        <li><a>DASHBOARD</a></li>
-        <li><a>OUR MRNU</a></li>
-        <li><a>OUR SHOP</a></li>
+        <li><Link to='/'>HOME</Link></li>
+        <li><Link to='/ourmanu'>OUR MANU</Link></li>
+        <li><Link to='/order/salad'>OUR ORDER</Link></li>
+        <li><Link to='/contact'>CONTACT US</Link></li>
+        <li><Link to='/dashboard'>DASHBOARD</Link></li>
     </>
     return (
         <>
@@ -19,7 +21,7 @@ const Navber = () => {
                         </ul>
                     </div>
                     <div>
-                        <a className="btn btn-ghost normal-case text-2xl font-bold">BISTRO BOSS</a>
+                        <Link to='/' className="btn btn-ghost normal-case text-2xl font-bold">BISTRO BOSS</Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -28,7 +30,7 @@ const Navber = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Get started</a>
+                    <Link className="btn" to='/login'>Login</Link>
                 </div>
             </div>
         </>
